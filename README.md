@@ -10,8 +10,7 @@
 - `map()` creates a new array by transforming each element of the original array.  
 - `forEach()` executes a function on each array element but does not return a new array.  
 - `filter()` creates a new array containing elements that meet a specified condition.  
-
-<!-- Question 3 : Arrow functions in ES6 -->
+!-- Question 3 : Arrow functions in ES6 -->
 
 - Arrow functions are a concise way to write functions using the `=>` syntax.  
 - They inherit the `this` value from the surrounding context, unlike regular functions.  
