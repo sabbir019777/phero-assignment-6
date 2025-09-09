@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Earth</title>
+
+    <!-- tailwind / daisyui -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet" type="text/css" />
+        
+            <!-- css link  -->
+             
+   <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="bg-gray-900">
+
+                       <!-- Navbar -->
+
+<nav class="w-full h-[91px] bg-green-600 flex items-center justify-between pl-[135px] pr-[180px]">
+ <div class="flex-shrink-0">
+  <h1 class="text-white text-[28px] font-bold">Green Earth</h1>
+</div>
+
+  <!-- Menu -->
+
+<div class="flex gap-[24px]">
+ <a href="#" class="text-white text-[19px] hover:text-green-200 transition-colors">About</a>
+ <a href="#" class="text-white text-[19px] hover:text-green-200 transition-colors">Gallery</a>
+ <a href="#" class="text-white text-[19px] hover:text-green-200 transition-colors">Plant a Tree</a>
+</div>
+
+ <!-- Right btn -->
+                      
+ <div class="flex-shrink-0">
+<button class="bg-yellow-400 text-[#14532D] font-medium py-[10px] px-[28px] rounded-[999px] hover:bg-yellow-500 transition-colors duration-300">Plant a Tree</button>
+</div>
+ </nav>
+ 
+                         <!-- Banner Section -->
+ <div class="relative w-full h-[385px] bg-[#CFF0DC]">
+ <!-- Left image -->
+<div class="absolute top-0 left-0">
+ <img src="assets/hero-leaf1.png" alt="Tree Image left" class="w-[450px] h-[375px] rounded-lg cursor-pointer hover:opacity-90 transition-opacity">
+ </div>
+ <!-- Right image -->
+<div class="absolute top-0 right-0">
+   <img src="assets/hero-leaf2.png" alt="Tree Image Right" class="w-[520px] h-[375px] rounded-lg cursor-pointer hover:opacity-90 transition-opacity">
+  </div>
+
+   <!-- Center content -->
+
+  <div class="absolute inset-0 flex flex-col items-center justify-center p-[24px]">
+<h1 class="text-[#1F2937] text-[39px] font-bold text-center">Plant a Tree, Grow a Future</h1>
+  <p class="text-[#1F2937] text-sm leading-[1.4] text-center max-w-[627px] my-4">Join our mission to plant 1 million trees and make the Earth greener for future <br>generations.</p>
+
+   <!-- Involved btn -->
+
+ <button class="bg-yellow-400 text-[#14532D] font-medium py-[10px] px-[20px] rounded-full hover:bg-yellow-500 transition-colors duration-300">Get Involved</button>
+ </div>
+</div>
+    
+                           <!-- Main section -->
+
+ <main class="w-full bg-green-50 shadow-lg px-[40px] py-[30px] flex flex-col gap-8">
+  <div class="w-full flex justify-center">
+   <h2 class="text-3xl font-bold text-gray-800">Choose Your Trees</h2>
+  </div>
+  <div class="w-full flex flex-col lg:flex-row gap-[35px]">
+
+ <!-- Categories -->
+
+ <aside class="lg:flex-[0.4] h-[945px] bg-green-50 shadow p-4 flex flex-col gap-4 overflow-y-auto">
+<h3 class="font-bold text-black text-2xl">Categories</h3>
+  <div id="categories-container" class="flex flex-col gap-2 mt-4">
+   <button class="category-btn bg-green-600 text-white py-2 px-4 rounded">All Trees</button>
+    <button class="category-btn text-black py-2 px-4 rounded hover:bg-green-600 hover:text-white">Fruit Trees</button>
+   <button class="category-btn text-black py-2 px-4 rounded hover:bg-green-600 hover:text-white">Flowering Trees</button>
+  <button class="category-btn text-black py-2 px-4 rounded hover:bg-green-600 hover:text-white">Shade Trees</button>
+    <button class="category-btn text-black py-2 px-4 rounded hover:bg-green-600 hover:text-white">Medicinal Trees</button>
+<button class="category-btn text-black py-2 px-4 rounded hover:bg-green-600 hover:text-white">Timber Trees</button>
+  <button class="category-btn text-black py-2 px-4 rounded hover:bg-green-600 hover:text-white">Evergreen Trees</button>
+  <button class="category-btn text-black py-2 px-4 rounded hover:bg-green-600 hover:text-white">Ornamental Plants</button>
+ <button class="category-btn text-black py-2 px-4 rounded hover:bg-green-600 hover:text-white">Bamboo</button>
+ <button class="category-btn text-black py-2 px-4 rounded hover:bg-green-600 hover:text-white">Climbers</button>
+<button class="category-btn text-black py-2 px-4 rounded hover:bg-green-600 hover:text-white">Aquatic Plants</button>
+    </div>
+ </aside>
+            
+ <section id="plants-container" class="lg:flex-[2] grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+ </section>
+ 
+ <aside class="lg:flex-[0.4] h-[945px] bg-white shadow p-4 flex flex-col gap-4 overflow-y-auto">
+  <h3 class="text-xl font-bold text-black">Your Cart</h3>
+  <div id="cart-items" class="flex flex-col gap-3 overflow-y-auto">
+  </div>
+    <div class="mt-4 font-bold text-black">Total: $<span id="cart-total">0</span></div>
+    </aside>
+   </div>
+   </main>
+    
+                      <!-- Campaign Section -->
+
+ <section class="w-full bg-green-50 shadow-1xl overflow-hidden -mt-16 md:-mt-0">
+
+  <!-- Section title -->
+
+  <div class="w-full h-[80px] flex items-center justify-center">
+ <h1 class="text-2xl md:text-3xl font-semibold text-gray-800">About the Campaign</h1>
+ </div>
+   <div class="flex flex-col md:flex-row items-center md:items-center gap-10 px-8 md:px-36 py-12 md:py-16">
+
+   <!-- Image -->
+
+<div class="md:flex-1 overflow-hidden shadow-xl relative w-full md:h-[500px] flex items-center justify-center">
+  <img src="assets/about.png" alt="Green Earth Campaign" class="w-full h-full object-cover">
+  <div class="absolute inset-0 bg-pink-200 opacity-25 mix-blend-multiply pointer-events-none"></div>
+  </div>
+
+  <!-- Text container -->
+
+  <div class="md:flex-1 flex flex-col justify-center w-full">
+   <p class="text-gray-500 mb-6 text-sm md:text-base font-normal leading-relaxed text-center md:text-left"> Green Earth is a global tree plantation initiative dedicated to fighting <br>climate change. Since our start, we've planted over 500,000 trees <br>worldwide. By joining our campaign, you help restore forests, create <br>habitats for wildlife, and combat global warming.</p>
+
+   <!-- List -->
+
+<ul class="list-disc list-inside text-gray-500 space-y-3 text-sm md:text-base font-normal text-center md:text-left">
+   <li>Restore Natural Habitats</li>
+     <li>Improve Air Quality</li>
+   <li>Support Local Communities</li>
+   </ul>
+   </div>
+</div>
+  </section>
+    
+                         <!-- Impact Section -->
+
+<section class="w-full bg-[#CFF0DC] py-[64px]">
+<div class="container mx-auto px-[32px]">
+ <div class="text-center mb-[48px]">
+ <h2 class="text-[28px] font-bold text-gray-800">Our Impact</h2>
+   </div>
+  <div class="flex justify-center gap-[32px]">
+
+   <!-- trees planted box -->
+
+  <div class="w-[300px] h-[156px] p-[40px] rounded-[12px] bg-white flex flex-col items-center justify-center gap-[20px] transition-all duration-900 hover:bg-green-50 hover:shadow-lg">
+  <div class="text-green-600 text-[40px] font-bold">500K+</div>
+   <div class="text-gray-700 text-[18px]">Trees Planted</div>
+  </div>
+
+  <!-- involved box -->
+
+ <div class="w-[300px] h-[156px] p-[40px] rounded-[12px] bg-white flex flex-col items-center justify-center gap-[20px] transition-all duration-900 hover:bg-green-50 hover:shadow-lg">
+   <div class="text-green-600 text-[40px] font-bold">120+</div>
+  <div class="text-gray-700 text-[18px]">Communities Involved</div>
+   </div>
+
+   <!-- countries box -->
+
+  <div class="w-[300px] h-[156px] p-[40px] rounded-[12px] bg-white flex flex-col items-center justify-center gap-[20px] transition-all duration-900 hover:bg-green-50 hover:shadow-lg">
+  <div class="text-green-600 text-[40px] font-bold">30+</div>
+   <div class="text-gray-700 text-[18px]">Countries Reached</div>
+   </div>
+</div>
+ </div>
+ </section>
+    
+                       <!-- Plant tree section -->
+
+ <div class="bg-green-900 min-h-screen flex flex-col items-center justify-center">
+   <h2 class="text-[32px] font-bold text-white mb-[24px] text-center">Plant a Tree Today</h2>
+  <div class="w-[400px]">
+    <div class="bg-green-800 rounded-lg shadow-lg overflow-hidden">
+  <div class="bg-green-700 rounded-lg p-[32px] shadow-lg">
+
+<!-- name input -->
+
+ <div class="mb-[16px]">
+ <input type="text" id="name" placeholder="Your Name" class="w-full px-[16px] py-[12px] bg-white text-gray-800 border border-green-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-300">
+   </div>
+
+    <!-- email input -->
+
+<div class="mb-[16px]">
+ <input type="email" id="email" placeholder="Your Email Address" class="w-full px-[16px] py-[12px] bg-white text-gray-800 border border-green-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-300">
+  </div>
+
+ <!-- trees select -->
+
+<div class="mb-[24px]">
+ <select id="trees" class="w-full px-[16px] py-[12px] bg-white text-gray-800 border border-green-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-300">
+  <option value="0">Number of Trees</option>
+<option value="5">1 tree-items - $5</option>
+  <option value="25">5 trees-items - $25</option>
+ <option value="50">10 trees-items - $50</option>
+   </select>
+  </div>
+
+  <!-- donate btn -->
+
+ <button id="donateBtn" class="w-full bg-yellow-500 hover:bg-yellow-600 text-green-900 font-bold py-[12px] px-[16px] rounded-full transition duration-300">Donate Now</button>
+  </div>
+  </div>
+ </div>
+   </div>
+    
+                       <!-- Footer section-->
+
+ <div class="w-full h-[72px] bg-[#0D3A1F] flex items-center justify-center">
+ <div class="text-white text-base font-normal">© 2025 Green Earth. All Rights Reserved.</div>
+  </div>
+
+                        <!-- Modal --> 
+
+  <div id="plant-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg p-6 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+ <div class="flex justify-between items-center mb-4">
+   <h3 id="modal-title" class="text-2xl font-bold"></h3>
+  <button id="close-modal" class="text-gray-500 hover:text-gray-700">
+  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+   </svg>
+  </button>
+ </div>
+   <div id="modal-content"></div>
+   </div>
+</div>
+
+                      <!-- js section  -->
+
+<script>
+
+/* Helper function*/
+
+function el(tag, cls, html) {
+ const e = document.createElement(tag);
+ if (cls) e.className = cls;
+ if (html !== undefined) e.innerHTML = html;
+    return e;
+}
+
+/* DOM elements */
+
+const API_BASE = "https://openapi.programming-hero.com/api";
+  const categoriesContainer = document.getElementById('categories-container');
+ const plantsSection = document.getElementById('plants-container');
+ const cartContainer = document.getElementById('cart-items');
+ let cart = [];
+ let activeCategory = 'all';
+
+/* Spinner*/
+function showSpinner() {
+ let spinner = document.getElementById('js-spinner');
+if (!spinner) {
+   spinner = el('div', 'fixed inset-0 flex items-center justify-center bg-black bg-opacity-30 z-50');
+  spinner.id = 'js-spinner';
+   spinner.innerHTML = `<div class="p-4 bg-white rounded-lg flex items-center gap-3">
+     Loading... 
+   <svg class="animate-spin h-5 w-5" viewBox="0 0 24 24">
+  <circle cx="12" cy="12" r="10" stroke="gray" stroke-width="4" stroke-linecap="round" fill="none"></circle>
+    </svg>
+  </div>`;
+ document.body.appendChild(spinner);
+    }
+}
+
+function hideSpinner() {
+  const spinner = document.getElementById('js-spinner');
+  if (spinner) spinner.remove();
+}
+
+/* categories*/
+
+async function loadCategories() {
+  try {
+  showSpinner();
+  const res = await fetch(API_BASE + '/categories');
+   const data = await res.json();
+    const categories = data.data || data.categories || [];
+    renderCategories(categories);
+  } catch(err) {
+console.error('Categories error:', err);
+   } finally {
+        hideSpinner();
+    }
+}
+
+/*  Render categories*/
+
+function renderCategories(categories) {
+ categoriesContainer.innerHTML = '';
+const allBtn = el('button', 'category-btn bg-green-600 text-white py-2 px-4 rounded', 'All Trees');
+ allBtn.dataset.id = 'all';
+ allBtn.addEventListener('click', () => setCategory('all'));
+  categoriesContainer.appendChild(allBtn);
+
+ categories.forEach(cat => {
+   const id = cat.id || cat.category_id || cat._id || cat.slug || cat.index;
+  const name = cat.name || cat.category_name || cat.label || cat;
+ const btn = el('button', 'category-btn text-black py-2 px-4 rounded hover:bg-green-600 hover:text-white', name);
+   btn.dataset.id = id;
+  btn.addEventListener('click', () => setCategory(id));
+  categoriesContainer.appendChild(btn);
+ });
+
+  setCategory('all');
+}
+
+/*  Active category*/
+
+function setCategory(id) {
+ activeCategory = id;
+ const btns = categoriesContainer.querySelectorAll('button');
+ btns.forEach(b => {
+if (b.dataset.id === id) {
+    b.classList.add('bg-green-600','text-white');
+   b.classList.remove('text-black');} 
+  else {
+     b.classList.remove('bg-green-600','text-white');
+    b.classList.add('text-black');
+   }
+});
+  loadPlantsByCategory(id);
+}
+
+/* Load Plants*/
+
+async function loadPlantsByCategory(id) {
+ try {
+  showSpinner();
+ let url = API_BASE + '/plants';
+  if (id !== 'all') url = API_BASE + '/category/' + id;
+  const res = await fetch(url);
+ const data = await res.json();
+  let plants = data.data || data.plants || [];
+ renderPlantCards(plants);
+ } catch(err) {
+  plantsSection.innerHTML = '<div class="text-red-500">Failed to load plants.</div>';
+ console.error(err);
+ } finally {
+    hideSpinner();
+    }
+}
+
+/*  Plant Cards */
+
+function renderPlantCards(plants) {
+ plantsSection.innerHTML = '';
+if (!plants || plants.length === 0) {
+  plantsSection.innerHTML = '<div class="text-gray-600">No plants found.</div>';
+ return;
+  }
+
+  plants.forEach(p => {
+ const id = p.id || p._id || p.plant_id || p.plantId;
+  const name = p.name || p.title || 'Unknown Plant';
+ const img = p.image || p.img || p.img_url || 'https://via.placeholder.com/382x200.png?text=Tree+Image';
+   const desc = p.description || p.short_description || 'No description available.';
+  const price = p.price || (Math.floor(Math.random() * 900) + 100);
+
+   const card = el('div', 'relative w-[382px] h-[450px] bg-white shadow-md p-4 flex flex-col gap-4 rounded-lg');
+  const image = el('img', 'w-full h-[200px] object-cover rounded-lg');
+    image.src = img;
+      image.alt = name;
+
+const content = el('div', 'flex flex-col gap-2');
+  const title = el('h4', 'font-semibold text-black cursor-pointer hover:text-green-600 transition-colors', name);
+ title.addEventListener('click', () => loadPlantDetails(id));
+  const pdesc = el('p', 'text-sm text-gray-600 leading-4 opacity-80', desc);
+  content.append(title, pdesc);
+
+  const bottom = el('div', 'flex items-center justify-between mt-4');
+  const addBtn = el('button', 'bg-green-400 hover:bg-yellow-400 px-4 py-1 text-sm font-medium rounded-full text-white', 'Add to Cart');
+  addBtn.addEventListener('click', () => addToCart({ id, name, price }));
+ const priceEl = el('span', 'font-semibold text-black', '$' + price);
+   bottom.append(addBtn, priceEl);
+
+  card.append(image, content, bottom);
+ plantsSection.appendChild(card);
+  });
+}
+
+/* Plant details */
+
+async function loadPlantDetails(id) {
+ try {
+  showSpinner();
+  const res = await fetch(API_BASE + '/plant/' + id);
+  const data = await res.json();
+const plant = data.data || data.plant || {};
+    showPlantModal(plant);} 
+ catch(err) {
+   console.error('Plant details error:', err);
+   showPlantModal({
+  name: 'Error',
+description: 'Failed to load plant details. Please try again later.',
+   image: 'https://via.placeholder.com/600x400.png?text=Error',
+   price: 0
+ });} 
+ finally {
+   hideSpinner();
+    }
+}
+
+/* Show Plant Modal */
+
+function showPlantModal(plant) {
+ const modal = document.getElementById('plant-modal');
+  const modalTitle = document.getElementById('modal-title');
+  const modalContent = document.getElementById('modal-content');
+
+ modalTitle.textContent = plant.name || 'Plant Details';
+
+ const img = plant.image || plant.img || plant.img_url || 'https://via.placeholder.com/600x400.png?text=Plant+Image';
+ const desc = plant.description || plant.long_description || 'No description available.';
+   const price = plant.price || 0;
+  const benefits = plant.benefits || ['Improves air quality', 'Provides shade', 'Supports biodiversity'];
+
+ modalContent.innerHTML = `
+ <div class="flex flex-col md:flex-row gap-6">
+  <div class="md:w-1/2">
+  <img src="${img}" alt="${plant.name}" class="w-full h-64 object-cover rounded-lg">
+</div>
+  <div class="md:w-1/2 flex flex-col gap-4">
+ <p class="text-gray-700">${desc}</p>
+ <div class="bg-green-50 p-4 rounded-lg">
+   <h4 class="font-bold text-green-800 mb-2">Benefits:</h4>
+  <ul class="list-disc list-inside text-green-700">
+                        ${benefits.map(b => `<li>${b}</li>`).join('')}
+   </ul>
+    </div>
+<div class="flex justify-between items-center">
+  <span class="text-xl font-bold text-green-800">$${price}</span>
+  <button class="bg-green-600 hover:bg-yellow-500 text-white px-4 py-2 rounded-full" onclick="addToCartFromModal('${plant.id || ''}', '${plant.name || 'Plant'}', ${price})">Add to Cart</button>
+  </div>
+   </div>
+  </div>
+  `;
+
+  modal.classList.remove('hidden');
+}
+
+/* Cart Functions */
+
+function addToCart(item) {
+  cart.push({ ...item, qty: 1 });
+  renderCart();
+}
+
+function addToCartFromModal(id, name, price) {
+  addToCart({ id, name, price });
+ document.getElementById('plant-modal').classList.add('hidden');
+}
+
+function removeFromCart(index) {
+  cart.splice(index, 1);
+    renderCart();
+}
+
+function renderCart() {
+ cartContainer.innerHTML = '';
+
+  const itemsToShow = cart.slice(-5);
+ const hasMore = cart.length > 5;
+
+ itemsToShow.forEach((ci, index) => {
+ const row = el('div', 'flex items-center justify-between py-2 border-b border-gray-100');
+ const left = el('div', 'flex items-center gap-3');
+   const name = el('span','', ci.name);
+
+  const priceRemove = el('div', 'flex items-center gap-2');
+ const price = el('span','font-semibold text-green-600','$' + ci.price);
+  const removeBtn = el('button','text-red-500 font-bold','❌');
+   removeBtn.addEventListener('click', () => removeFromCart(cart.length - itemsToShow.length + index));
+    priceRemove.append(price, removeBtn);
+
+ left.append(name);
+   row.append(left, priceRemove);
+  cartContainer.appendChild(row);
+    });
+
+ if (hasMore) {
+   const moreInfo = el('div', 'text-center text-gray-500 mt-2', `+${cart.length - 5} more items in cart`);
+   cartContainer.appendChild(moreInfo);
+    }
+
+    updateCartTotal();
+}
+function updateCartTotal() {
+  let totalEl = document.getElementById('cart-total');
+  const totalContainer = totalEl.parentElement; 
+const total = cart.reduce((sum, c) => sum + c.price, 0);
+
+ if (total > 0) {
+  totalEl.innerHTML = total;
+   totalContainer.classList.remove('hidden'); } 
+  else {
+ totalContainer.classList.add('hidden'); 
+    }
+}
+
+/* Plant  tree  */
+
+document.getElementById('donateBtn').addEventListener('click', function() {
+  const name = document.getElementById('name').value;
+ const email = document.getElementById('email').value;
+  const trees = document.getElementById('trees').value;
+
+ if (!name || !email || trees === '0') {
+  alert('Please fill all fields');
+    return;
+    }
+
+ alert(`Thank you ${name}! You have donated for ${trees} trees. We'll contact you at ${email}.`);
+});
+
+/*  Modal controls */
+
+document.getElementById('close-modal').addEventListener('click', function() {
+  document.getElementById('plant-modal').classList.add('hidden');
+});
+
+document.getElementById('plant-modal').addEventListener('click', function(e) {
+ if (e.target === this) {
+   this.classList.add('hidden');
+    }
+});
+
+  loadCategories();
+
+</script>
+
+</body>
+</html>
